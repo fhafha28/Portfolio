@@ -67,9 +67,9 @@ function App() {
   );
 }
 var 탭UI = {
-  info: <p>상품정보</p>,
-  shipping: <p>배송관련</p>,
-  refund: <p>환불약관</p>
+  info: <p>Product Info</p>,
+  shipping: <p>Delivery</p>,
+  refund: <p>Refund policy</p>
 }
 
 function Component() {
