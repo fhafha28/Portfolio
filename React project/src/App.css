@@ -1,0 +1,1128 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL&display=swap');
+
+
+div,
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+html {
+  line-height: 1.15;
+  /*기본 행간 높이*/
+}
+
+table {
+  border-collapse: collapse;
+}
+
+p,
+h4,
+h3,
+h2,
+h1,
+span {
+  transform: rotate(0.04deg);
+}
+
+h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border-color: 2px solid #ebe9e9;
+}
+
+.btn {
+  width: 80px;
+  padding: 5px;
+  font-family: cursive;
+  font-size: 14px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.btn-right {
+  float: right;
+
+}
+
+.btn-blue {
+  background-color: #b39e7d;
+  color: white;
+  position: relative;
+  font-size: 15px;
+}
+
+.btn-blue:hover {
+  background-color: #625746;
+}
+
+.btn-grey {
+  background-color: #a4a4a4;
+  color: white;
+  position: relative;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+.font-title {
+  width: 100%;
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  margin-top: 10px;
+}
+
+.font-large {
+  width: 100%;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.font-medium {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.font-small {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.v-line {
+  border-left: solid #ebe9e9;
+}
+
+.w50 {
+  width: 50%;
+  float: left;
+}
+
+.w70 {
+  width: 70%;
+  float: left;
+}
+
+.w30 {
+  width: 30%;
+  float: right;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.clearBoth {
+  display: block;
+  clear: both;
+}
+
+.position-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+@keyframes color {
+  0% {
+    color: #b39e7d;
+  }
+  50% {
+    color: #625746;
+  }
+  100% {
+    color: #b39e7d;
+  }
+}
+.loading {
+  width: 100%;
+  color: #b39e7d;
+  font-size: 80px;
+  position: absolute;
+  top: 300px;
+  z-index: 2;
+  transition: color;
+  animation-name: color;
+  animation-duration: 1s;
+  animation-iteration-count: 7;
+}
+
+.loading p {
+  font-size: 30px;
+}
+
+
+
+/* 여기서부터 스타일 시작 */
+/* blog */
+
+.btn::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.btn-black {
+  background-color: black;
+  color: white;
+}
+
+
+.btn-blog {
+  font-family: 'Charis SIL', serif;
+  background-color: hsl(358, 91%, 82%);
+  color: white;
+  width: auto;
+  border: none;
+  border-radius: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10px;
+  margin-right: 5px;
+
+}
+
+a {
+  color: inherit;
+}
+
+
+.black-nav {
+  background-color: #fec3b7;
+  width: 100%;
+  display: flex;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  align-items: center;
+}
+
+.nav-below {
+  width: 100%;
+  margin-top: 70px;
+}
+
+.blognavtitle {
+  width: auto;
+  margin-bottom: 0;
+  margin-right: 20px;
+  font-size: 30px;
+}
+
+
+.blog-card-bg {
+  background-color: hsl(0, 65%, 97%);
+  padding: 20px;
+}
+
+.blog-card-container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.blog-card-item {
+  width: 30%;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.blog-card-item img {
+  width: 100%;
+  display: block;
+}
+
+.overlay-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.overlay-wrap:hover .overlay {
+  margin-top: 50%;
+
+}
+
+.overlay {
+  position: absolute;
+  padding: 20px;
+  margin-top: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: all 0.5s;
+}
+
+.overlay-label {
+  width: 100%;
+  height: 70px;
+  color: white;
+  font-size: 18px;
+  padding: 5px;
+  padding-bottom: 0px;
+}
+
+
+
+/* 게시판 */
+.board-head h4 {
+  float: left;
+  width: 70%;
+}
+
+.blog-list {
+  padding: 20px;
+  text-align: left;
+  border-bottom: 1px solid grey;
+  position: relative;
+}
+
+.blog-list-item h4 {
+  float: left;
+  width: 80%;
+}
+
+.blog-list-item p {
+  float: left;
+  width: 80%;
+}
+
+.blog-list-item::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.like {
+  color: rgb(174, 56, 64);
+  cursor: pointer;
+}
+
+.btn-blog-list {
+  position: absolute;
+  right: 0;
+}
+
+
+.modal {
+  width: 100%;
+  padding: 20px;
+  display: block;
+  background-color: #eee;
+  margin-top: 10px;
+}
+
+.blog-btn-post {
+  margin-left: 10px;
+  position: relative;
+  top: -2px;
+}
+
+/* 3d flip프로필사진 */
+.flip-outer {
+  margin-left: 20px;
+  width: 200px;
+  height: 200px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.front {
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1;
+  backface-visibility: hidden;
+  background: rgb(255, 222, 218);
+}
+
+
+.back {
+  width: 100%;
+  background: rgb(255, 222, 218);
+  height: 100%;
+  border-radius: 50%;
+  padding-top: 60px;
+  position: absolute;
+  box-sizing: border-box;
+  text-align: center;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: all 1s;
+  transform-style: preserve-3d;
+}
+
+.flip-inner:hover {
+  transform: rotateY(180deg);
+}
+
+
+/* shop */
+.logo {
+  width: 100%;
+  min-width: 650px;
+  font-family: cursive;
+  position: relative;
+  font-size: 30px;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.logo-text {
+  width: 150px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.logo::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.welcome {
+  font-family: 'Raleway', sans-serif;
+  float: right;
+  font-size: 16px;
+  text-align: right;
+  margin-bottom: 10px;
+  padding-right: 0px;
+}
+
+.btns {
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+.searchbar {
+  width: 100px;
+  float: right;
+  margin-bottom: 15px;
+  z-index: 0;
+}
+
+.searchbar:hover {
+  width: 200px;
+  transition: all, 0.2s;
+}
+
+
+.nav-text {
+  text-decoration: none;
+  color: black;
+}
+
+.main-background {
+  width: 100%;
+  height: 500px;
+  background-image: url('./img/shoes.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  position: relative;
+}
+
+.main-title {
+  color: white;
+  font-size: 40px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.main-content {
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* 로그인창 */
+
+.black-bg {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  margin: 0 auto;
+  top: 50px;
+  left: 0;
+  right: 0;
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  padding: 30px;
+}
+
+.white-bg {
+  background: white;
+  width: 60%;
+  position: fixed;
+  margin: 0 auto;
+  top: 100px;
+  left: 0;
+  right: 0;
+  border-radius: 5px;
+  padding: 30px;
+  opacity: 1;
+}
+
+.form-hide {
+  display: none;
+}
+
+/* main page */
+
+.shop-bg {
+  background-color: #eee;
+  position: relative;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+}
+
+.shop-container {
+  width: 100%;
+}
+
+.shop-frame {
+  width: 100%;
+  padding: 10px;
+}
+
+.shop-item {
+  width: 33.3%;
+  float: left;
+  text-align: center;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+.item-title {
+  margin-top: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.item-img {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.more {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prev {
+  width: 50px;
+  height: 100%;
+  background-color: #282c3400;
+  position: absolute;
+  left: 10px;
+  border: none;
+  color: black;
+  font-size: 30px;
+  opacity: 0;
+  transition: all, 0.1s;
+}
+
+.prev:hover {
+  opacity: 1;
+}
+
+
+.next {
+  left: auto;
+  right: 10px;
+}
+
+.qty {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+/* detail페이지 */
+.container {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timercount {
+  width: 30px;
+  text-align: center;
+  color: white;
+  size: 15px;
+  float: left;
+  margin-right: 15px;
+  background-color: black;
+}
+
+.popup {
+  width: 100%;
+  position: absolute;
+}
+
+.cartPopup {
+  padding: 5px;
+  text-align: center;
+  width: 50%;
+  float: right;
+}
+
+/* Detail Tab */
+.tab-container {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+
+.tab-button {
+  display: block;
+  padding: 10px 20px 10px 20px;
+  float: left;
+  margin-right: -1px;
+  margin-bottom: -1px;
+  color: grey;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  list-style-type: none;
+}
+
+.tabBlue {
+  border-top: 2px solid #4ad9d4;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid white;
+  border-left: 1px solid #ccc;
+  color: black;
+  margin-top: -2px;
+}
+
+.tab-content {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* fade 애니메이션 */
+.fade-start {
+  opacity: 0;
+}
+
+.fade-end {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+/* cart */
+
+.cart-container {
+  min-width: 550px;
+  height: 100%;
+  padding: 50px;
+  background-color: #e7ddce;
+}
+
+.cart-title {
+  color: rgb(45, 45, 45);
+  font-family: cursive;
+}
+
+table {
+  vertical-align: middle;
+  text-align: right;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+}
+
+.cart-table {
+  width: 100%;
+  background-color: white;
+  border-color: #c3b8ac;
+}
+
+thead td {
+  color: #937e66;
+  font-family: cursive;
+  border-bottom: 1px solid #c3b8ac;
+  padding: 15px;
+}
+
+.row-line {
+  border-bottom: 1px solid #c3b8ac;
+}
+
+
+tbody td {
+  color: #cbb398;
+  padding: 15px;
+}
+
+
+.cart-img {
+  width: 60px;
+  height: 60px;
+}
+
+.cart-item {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+  vertical-align: bottom;
+  color: black;
+  padding-bottom: 0px;
+}
+
+
+.cart-detail {
+  text-align: left;
+  vertical-align: top;
+  padding-top: 0px;
+}
+
+.cart-boldPrice {
+  width: 100%;
+  color: rgb(45, 45, 45);
+  font-weight: 1000;
+  padding: 15px;
+  text-align: right;
+}
+
+.cart-btn-pay {
+  width: 250px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 15px;
+  color: white;
+  border: none;
+  float: right;
+  margin-top: 10px;
+}
+
+.cart-edit {
+  color: rgb(45, 45, 45);
+  font-family: cursive;
+}
+
+.btn-count {
+  border: none;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.checkbok {
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+
+/* About, Event */
+
+
+
+.white-content {
+  color: rgb(11, 11, 11);
+  width: 100%;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.event-titlediv {
+  left: auto;
+  right: auto;
+  display: block;
+  text-align: center;
+}
+
+.event-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.icon-container {
+  display: flex;
+  width: 75%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.icon-box {
+  margin: 10px;
+}
+
+.icon-name {
+  text-align: center;
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  justify-content: center;
+  align-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.icon-box i {
+  background-color: rgb(255, 255, 255);
+  width: 70px;
+  height: 70px;
+  padding-top: 20px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  color: #554935;
+  font-size: 40px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.black-title {
+  color: black;
+  font-size: 18px;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
+.black-content {
+  color: black;
+  font-size: 14px;
+  width: 100%;
+  font-weight: 300;
+}
+
+.section-container {
+  width: 90%;
+  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-item1 {
+  width: 50%;
+  height: 50%;
+  float: left;
+  text-align: left;
+  padding: 20px;
+  padding-top: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all, 0.5s;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/portfolio-1.jpg);
+  position: relative;
+}
+
+.section-item2 {
+  width: 50%;
+  height: 50%;
+  float: left;
+  text-align: left;
+  padding: 20px;
+  padding-top: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all, 0.5s;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/portfolio-2.jpg);
+  position: relative;
+
+}
+
+.section-item3 {
+  width: 50%;
+  height: 50%;
+  float: left;
+  text-align: left;
+  padding: 20px;
+  padding-top: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all, 0.5s;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/portfolio-3.jpg);
+  position: relative;
+}
+
+.section-item4 {
+  width: 50%;
+  height: 50%;
+  float: left;
+  text-align: left;
+  padding: 20px;
+  padding-top: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all, 0.5s;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/portfolio-4.jpg);
+  position: relative;
+}
+
+.top-label {
+  margin-bottom: 0;
+}
+
+.bottom-label {
+  margin-top: 0;
+}
+
+
+.white-content {
+  color: white;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.white-title {
+  color: white;
+  width: 90%;
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+
+.white-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  border: 0px solid white;
+  transition: all 0.5s;
+}
+
+.white-box:hover {
+  border: 15px solid white;
+}
+
+.overlay {
+  position: absolute;
+  color: red;
+}
+
+.sns {
+  background-color: #b39e7d;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  box-sizing: border-box;
+  padding-top: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.small-container {
+  display: flex;
+  width: 30%;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.corp {
+  display: block;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.lorem {
+  width: 70%;
+  height: 200px;
+  overflow-y: scroll;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.lorem h5 {
+  text-align: center;
+}
+
+.stickyContainer {
+  background-color: rgb(236, 231, 224);
+  height: 1200px;
+  margin-top: 80px;
+  padding: 20px;
+
+}
+
+.aboutText {
+  width: 60%;
+  float: left;
+}
+
+.aboutImg {
+  float: right;
+  width: 400px;
+  position: sticky;
+  top: 170px;
+  transition: all, 0.2ms;
+}
+
+/* Event */
+.card-background {
+  height: 2000px;
+  margin-top: 30px;
+  margin-bottom: 1600px
+}
+
+.card-box img {
+  display: block;
+  margin: auto;
+  max-width: 80%;
+
+}
+
+.card-box {
+  position: sticky;
+  top: 100px;
+  margin-top: 80px;
+
+}
+
+.eventContiner {
+  width: 100%;
+  margin-top: 150px;
+  padding: 20px
+}
+
+@media screen and (max-width: 1200px) {
+  .logo {
+    font-size: 20px;
+    min-width: 400px;
+    padding-bottom: 0;
+  }
+
+  .w50 {
+    width: 100%;
+    min-width: 580px;
+    margin-bottom: 20px;
+  }
+  .blog-card-container {
+    display: block;
+
+  }
+  
+  .blog-card-item {
+    width: 90%;
+  }
+  
+  .overlay-label {
+    font-size: 25px;
+
+  }
+  .cart-item {
+    font-size: 14px;
+  }
+
+  td {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .cart-detail {
+    font-size: 11px;
+  }
+
+  .aboutText {
+    width: 40%;
+  }
+  .stickyContainer{
+    min-width: 760px;
+  }
+
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
