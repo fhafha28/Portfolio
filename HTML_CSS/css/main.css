@@ -1,0 +1,634 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+필요시 폰트 url 삽입하기. */
+
+@font-face {
+    font-family: 'NanumSquare';
+    src: url(../fonts/NanumSquareR.woff);
+}
+
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: 800;
+    src: url(../fonts/NanumSquareB.woff);
+}
+
+p,
+h4,
+h3,
+h2,
+h1,
+span {
+    transform: rotate(0.04deg);
+}
+
+div,
+input,
+textarea {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0px;
+}
+
+html {
+    line-height: 1.15;
+    /*기본 행간 높이*/
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.profile {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
+.box {
+    width: 100px;
+    background-color: aquamarine;
+    margin: 30px;
+    padding: 40px;
+    border-radius: 15px;
+    display: box;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 10px;
+    box-shadow: 5px 5px 5px 5px darkslategray;
+}
+
+.container {
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header {
+    width: 100%;
+    height: 50px;
+    background: aquamarine;
+}
+
+.left-menu {
+    width: 20%;
+    height: 400px;
+    background-color: cornflowerblue;
+    /* float: left; */
+    display: inline-block;
+    vertical-align: top;
+}
+
+.right {
+    width: 80%;
+    height: 400px;
+    background-color: coral;
+    /* float: left; */
+    display: inline-block;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: grey;
+    /* clear: both; */
+}
+
+.blog-content {
+    width: 80%;
+    height: 400px;
+    float: left;
+}
+
+.blog-img {
+    width: 20%;
+    height: 200px;
+    float: left;
+}
+
+.blog-profile {
+    width: 10%;
+    border-radius: 70%;
+    overflow: hidden;
+    float: left;
+}
+
+.blog-name {
+    float: left;
+}
+
+.navbar li {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    background: #eee;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.navbar a {
+    font-size: 16px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.main-background {
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/shoes.jpg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px;
+    position: relative;
+}
+
+
+.main-title {
+    color: white;
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.main-content {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.main-button {
+    padding: 15px;
+    font-size: 20px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 150px;
+}
+
+.main-card {
+    width: 60%;
+    max-width: 600px;
+    min-width: 300px;
+    height: 35%;
+    padding: 30px;
+    background-color: rgb(225, 225, 225);
+    text-align: center;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -40px;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.form-background {
+    background-color: black;
+    padding: 30px;
+}
+
+.form-white {
+    background-color: white;
+    padding: 30px;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    z-index: 5;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+textarea {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 5px;
+}
+
+.input-btn {
+    position: relative;
+    right: 0px;
+    left: 250px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.subs-box {
+    width: 100%;
+    text-align: center;
+}
+
+.w-50 {
+    width: 45%;
+    float: left;
+    padding: 10px;
+
+}
+
+input[id="sub"] {
+    width: 15%;
+    position: relative;
+    bottom: 20px;
+    left: -10px;
+}
+
+label[for="sub"] {
+    width: 50%;
+    position: relative;
+    bottom: 20px;
+    left: -10px;
+}
+
+
+.btn-submit {
+    width: 45%;
+    float: left;
+    position: relative;
+    left: 60%;
+    right: 10%;
+    bottom: 20px;
+    display: block;
+}
+
+.cart-container {
+    min-width: 650px;
+    height: 100%;
+    padding: 50px;
+    background-color: rgb(143, 198, 208);
+}
+
+.cart-title {
+    color: rgb(38, 68, 107);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+table {
+    vertical-align: middle;
+    text-align: right;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.cart-table {
+    width: 100%;
+    background-color: white;
+    border-color: rgb(38, 68, 107);
+}
+
+thead td {
+    color: hsl(189, 18%, 49%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-bottom: 1px solid rgb(143, 198, 208);
+    padding: 15px;
+}
+
+.row-line {
+    border-bottom: 1px solid rgb(143, 198, 208);
+}
+
+
+tbody td {
+    color: rgb(143, 198, 208);
+    padding: 15px;
+}
+
+
+.cart-img {
+    width: 60px;
+    height: 60px;
+}
+
+.cart-item {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    font-weight: 900;
+    text-align: left;
+    vertical-align: bottom;
+    color: black;
+    padding-bottom: 0px;
+}
+
+
+.cart-detail {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: left;
+    vertical-align: top;
+    padding-top: 0px;
+}
+
+.cart-boldPrice {
+    color: rgb(38, 68, 107);
+    font-weight: 1000;
+    padding: 15px;
+}
+
+.cart-btn-pay {
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(38, 68, 107);
+    border: none;
+    float: right;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: coral;
+    color: white;
+    float: right;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: chocolate;
+    /*마우스를 올려놓을 때*/
+}
+
+.btn:focus {
+    background: red;
+    /*클릭 후 계속 포커스 상태일 때*/
+}
+
+.btn:active {
+    background: blue;
+    /*클릭 중일 때*/
+}
+
+a:link {
+    color: red;
+    /*방문 전 링크*/
+}
+
+a:visited {
+    color: black;
+    /*방문 후 링크*/
+}
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(253, 138, 121);
+}
+
+
+.flex-item {
+    color: white;
+    margin-right: 15px;
+
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.logonav {
+    text-align: right;
+    font-size: 16px;
+}
+
+.shop-bg {
+    background-color: #eee;
+    padding: 20px;
+}
+
+.shop-container {
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+
+.shop-item {
+    width: 33%;
+}
+
+.shop-item img {
+    width: 100%;
+    display: block;
+}
+
+.overlay-wrap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.overlay-wrap:hover .overlay {
+    margin-top: 50%;
+
+}
+
+.overlay {
+    position: absolute;
+    margin-top: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all 0.5s;
+}
+
+.overlay-label {
+    width: 100%;
+    height: 70px;
+    color: white;
+    font-size: 40px;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.반응형container {
+    width: 80%;
+    max-width: 1000px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    float: center;
+    text-align: center;
+}
+
+
+.반응형container div {
+    float: left;
+    width: 25%;
+}
+
+.반응형container i {
+    background-color: burlywood;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    padding-top: 25px;
+    box-sizing: border-box;
+    color: white;
+    margin-top: 20px;
+}
+
+.btn-shake:hover{
+    animation-name: shake;
+    animation-duration: 0.2s;
+    animation-iteration-count: 2;
+}
+
+.ani-plus{
+    font-size: 60px;
+    margin-left: 200px;
+    width: 74px;
+}
+.ani-plus:hover{
+    animation-name: rotateExpand;
+    animation-duration: 1s;
+    animation-fill-mode: forwards 
+}
+
+.side-nav{
+    width: 200px;
+    background-color: black;
+    height: 100%;
+    position: fixed;
+    transform:translateX(-100px);
+    top:0;
+    padding: 20px;
+    color: white;
+    text-align: right;
+    z-index: 1;
+    transition: all, 1s;
+} 
+
+.side-nav:hover{
+    left:0px;
+    text-align: center;
+    transform:translateX(0px);
+    text-align: center;
+}
+.side-nav p {
+    text-align: left;
+}
+.side-nav:hover p {
+    text-align: center;
+}
+.side-nav:hover p{
+    animation-name: menu-item;
+    animation-duration: 2s;
+}
+
+
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+@keyframes rotateExpand {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(-15deg);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(1.5);
+    }
+}
+
+@keyframes menu-item {
+    0% {
+        transform: translateX(-250px);
+    }
+    50% {
+        transform: translateX(30px) skewX(-30deg);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+
+/* 미디어쿼리. 항상 최하단에 위치. */
+@media screen and (max-width: 1200px) {
+    .반응형container div {
+        width: 50%;
+    }
+
+    .반응형container {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .box {
+        font-size: 30px;
+    }
+
+    .반응형container div {
+        width: 100%;
+    }
+}

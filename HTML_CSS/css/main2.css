@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700&display=swap');
+
+div,
+input,
+textarea {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+html {
+    line-height: 1.15;
+    /*기본 행간 높이*/
+    font-family: 'Barlow', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+p,
+h4,
+h3,
+h2,
+h1,
+span {
+    transform: rotate(0.04deg);
+}
+
+h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border-color: 2px solid #ebe9e9;
+}
+
+.btn {
+    width: 80px;
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    float: left;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: #6fbaf8;
+    color: white;
+}
+
+.font-title {
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.font-large {
+    width: 100%;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.font-medium {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.font-small {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.v-line {
+    border-left: solid #ebe9e9;
+}
+
+.container {
+    width: 1200px;
+    height: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f7f9fc;
+    padding: 40px;
+}
+
+.mainProfil {
+    width: 80%;
+    max-width: 900px;
+    padding: 10px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profilPhoto {
+    width: 130px;
+
+}
+
+.profilPhoto img {
+    width: 100%;
+    border-radius: 70%;
+    overflow: hidden;
+    float: left;
+}
+
+.content-left {
+    float: left;
+    width: 60%;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.content-right {
+    float: right;
+    width: 40%;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+table {
+    width: 100%;
+    margin-left: 20px;
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.main-table tr td:nth-child(1) {
+    font-weight: bold;
+}
+
+.profilTap {
+    width: 80%;
+    max-width: 900px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.tap {
+    width: 100%;
+    height: 40px;
+    border-bottom: solid #ebe9e9;
+    position: relative;
+}
+
+.tap button {
+    border-bottom: solid #6fbaf8;
+    border-radius: 0px;
+    position: absolute;
+    bottom: -2px;
+}
+
+.tap-content {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    padding-top: 10px;
+}
+
+.works {
+    width: 25%;
+    height: 250px;
+    background-color: white;
+    float: left;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 15px;
+}
+
+.aboutSkills {
+    width: 50%;
+    float: left;
+    background-color: white;
+    padding: 20px;
+}
+
+.about {
+    height: 180px;
+    border-bottom: solid #ebe9e9;
+}
+
+.skills {
+    padding-top: 20px;
+    height: 180px;
+}
+
+.skills-tag {
+    width: auto;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-right: 6px;
+    margin-bottom: 5px;
+    float: left;
+    font-size: 12px;
+    border: solid 1.5px #ebe9e9;
+    border-radius: 15px;
+}
+
+.network {
+    width: 20%;
+    float: left;
+    margin-left: 15px;
+}
+
+.network-linkedin {
+    width: 140px;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.network-linkedin i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #6fbaf8;
+}
+
+.network-linkedin button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: inherit;
+    margin-bottom: 5px;
+}
+
+.network-profile {
+    padding-top: 10px;
+}
+
+.profile-mini {
+    width: 140px;
+    float: left;
+}
+
+.profilePhoto-mini {
+    border-radius: 70%;
+    overflow: hidden;
+    float: left;
+}
+
+.profilePhoto-mini img {
+    width: 50px;
+}
+
+.mini {
+    font-size: 10px;
+    margin-top: 0;
+    padding-left: 0px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .mainProfil {
+        height: 400px;
+    }
+    .center{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .content-left, .content-right{
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .btn-contact{
+        position: absolute;
+        left:0;
+        right:0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-table{
+        width: 200px;
+        margin-top:30px;
+        left:0;
+        right:0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .v-line {
+        border-left: none;
+    }
+
+    .works {
+        width: 100%;
+        height: 150px;
+        background-color: white;
+        float: left;
+        margin-bottom: 10px;
+    }
+    .aboutSkills {
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+    }
+    
+    .network {
+        width: 100%;
+        margin-left: 0px;
+    }
+    .network-linkedin {
+        width: 100%;    
+    }
+
+    .profilePhoto-mini{
+        width:100%;
+
+    }
+
+
+    .profilePhoto-mini img {
+        width: 80px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+}
