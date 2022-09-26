@@ -343,11 +343,11 @@
     let scrollCount = 0;
 
     $('.lorem').on('scroll', function () {
-      let 스크롤양 = document.querySelector('.lorem').scrollTop;
+      let scrollAmount = document.querySelector('.lorem').scrollTop;
       let 실제높이 = document.querySelector('.lorem').scrollHeight;
       let 눈에보이는div박스높이 = document.querySelector('.lorem').clientHeight;
 
-      if (스크롤양 + 눈에보이는div박스높이 >= 실제높이 - 10 && scrollCount == 0) {
+      if (scrollAmount + 눈에보이는div박스높이 >= 실제높이 - 10 && scrollCount == 0) {
         alert('You have read all');
         scrollCount++;
       }
