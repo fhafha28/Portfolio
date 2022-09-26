@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "title": "Dish washer",
+      "brand": "Washing world",
+      "photo": "pr1.jpg",
+      "price": 10000
+    },
+    {
+      "id": 1,
+      "title": "Wooden bed frame",
+      "brand": "Bed world",
+      "photo": "pr2.jpg",
+      "price": 20000
+    },
+    {
+      "id": 2,
+      "title": "Natural difuser set",
+      "brand": "Defuser world",
+      "photo": "pr3.jpg",
+      "price": 30000
+    },
+    {
+      "id": 3,
+      "title": "Cooling circulator",
+      "brand": "Wind world",
+      "photo": "pr4.jpg",
+      "price": 40000
+    }
+  ]
+}

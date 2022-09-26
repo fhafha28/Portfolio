@@ -1,0 +1,195 @@
+div,
+nav,
+body {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.15;
+    /*기본 행간 높이*/
+}
+
+body {
+    padding: 5px;
+    margin: 0px;
+}
+
+.btn-grey {
+    background: #444;
+    color: white;
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
+.navbar-brand {
+    font-size: 30px;
+}
+
+.alert-box {
+    background-color: skyblue;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+    display: none;
+}
+
+.list-group {
+    padding-top: 75px;
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.black-bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: 0 auto;
+    top: 50px;
+    left: 0;
+    right: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding: 30px;
+}
+
+.white-bg {
+    background: white;
+    width: 60%;
+    position: fixed;
+    margin: 0 auto;
+    top: 100px;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    padding: 30px;
+    opacity: 1;
+}
+
+.show-modal {
+    display: block;
+}
+
+.타이머 {
+    width: 30px;
+    text-align: center;
+    color: white;
+    size: 15px;
+    float: left;
+    margin-right: 15px;
+    background-color: black;
+
+}
+
+.slide-container {
+    width: 300vw;
+    height: 100%;
+    transition: all 0.7s;
+    transform: translateX(0vw);
+
+}
+
+.slide-box {
+    width: 100vw;
+    float: left;
+}
+
+.slide-box img {
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    padding: 1px;
+}
+
+.alert {
+    margin-top: 5px;
+    height: min-content;
+    padding: 5px;
+}
+
+
+
+.progression-bar {
+    background-color: black;
+    width: 0%;
+    height: 3px;
+    position: fixed;
+    z-index: 10;
+    margin: 0px;
+}
+
+.space {
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.btn {
+    margin-bottom: 5px;
+}
+
+.col-sm-4 {
+    margin-bottom: 5px;
+}
+
+.col-sm-4 p {
+    margin-bottom: 5px;
+}
+
+.grey {
+    background-color: lightgrey;
+    height: 2000px;
+    margin-top: 500px;
+}
+
+.texttext {
+    width: 300px;
+    float: left;
+}
+
+.imgimg {
+    float: right;
+    width: 400px;
+    position: sticky;
+    top: 100px;
+}
+.card-background{
+    height: 3000px;
+    margin-top: 30px;
+    margin-bottom: 1600px
+}
+
+.card-box img{
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    
+}
+
+.card-box{
+    position: sticky;
+    top: 100px;
+    margin-top: 200px;
+    
+}

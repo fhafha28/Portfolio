@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap');
+
+div,
+input,
+textarea {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+html {
+    line-height: 1.15;
+    /*기본 행간 높이*/
+    font-family: 'Mulish', sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+p,
+h4,
+h3,
+h2,
+h1,
+span {
+    transform: rotate(0.04deg);
+}
+
+
+h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border-color: 2px solid #ebe9e9;
+}
+
+.btn {
+    width: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    bottom:20px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.btn-black {
+    background-color: black;
+    color: white;
+}
+
+.font-title {
+    width: 100%;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.font-large {
+    width: 100%;
+    font-size: 17px;
+    margin-bottom: 0px;
+}
+
+.font-medium {
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.font-small {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 0;
+}
+
+.font-blue {
+    color: #6fbaf8;
+}
+
+.v-line {
+    border-left: solid #ebe9e9;
+}
+
+.container {
+    width: 1500px;
+    background-color: #f7f9fc;
+    padding: 40px;
+}
+
+.font-white {
+    color: white;
+}
+
+.font-grey {
+    color: grey;
+}
+
+.black-bg {
+    width: 400px;
+    height: 250px;
+    position: fixed;
+    margin: auto;
+    top: 50px;
+    left: 0;
+    right: 0;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding-top: 22px;
+    padding-bottom: 30px;
+    padding-left: 25px;
+    padding-right:30px;
+}
+
+.white-bg {
+    background: white;
+    width: 100%;
+    height:100%;
+    margin: auto;
+    top: 100px;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    padding: 30px;
+    opacity: 1;
+}
+
+.white-bg h4{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.btn-modal{
+   left: 150px;
+   bottom: 70px;
+}
+.btn-submit{
+    bottom: 70px;
+}
+.form-control{
+    margin-bottom: 5px;
+    position: absolute;
+    left: 140px;
+}
+.buy-info{
+    width: 70px;
+    margin-bottom: 5px;
+}
+.nav-bar {
+    width: 1500px;
+    height: 40px;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0px;
+    right: auto;
+    align-items: center;
+    padding-left: 20px;
+    z-index: 5;
+}
+
+.navtitle {
+    width: auto;
+    margin-bottom: 0;
+    margin-right: 20px;
+    font-size: 22px;
+
+}
+
+.navitem {
+    width: 50px;
+    font-size: 16px;
+    margin-right: 20px;
+    margin-top: 0;
+}
+
+.serchbar {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    z-index: 0;
+}
+.product{
+    width: 100%;
+}
+
+.product-container {
+    background-color: white;
+    width: 200px;
+    height: 310px;
+    padding: 20px;
+    float: left;
+    margin-right: 10px;
+    position: relative;
+}
+
+.productimg img {
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.productimg {
+    width: 100%;
+
+}
+
+.qty{
+    width: 50%;
+    border: solid 1px #eee;
+    position: relative;
+}
+.productprice{
+    margin-top:5px;
+    margin-bottom: 10px;
+}
+.cart-container{
+    width: 100%;
+    height: 650px;
+    background-color: rgb(221, 221, 221);
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom:20px;
+}
+
+.cart-container h4{
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+.dragbox{
+    width: 100%;
+    height: 400px;
+    margin:5px;
+    background-color: black;
+    margin-left:auto;
+    margin-right:auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dragcontent{
+    text-align: center;
+}
+
+.final{
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    
+}
+
+.totalPrice{
+    width: 30%;
+    padding-left:20px;
+    font-size: 28px;
+}
+
+.modal2{
+    position: fixed;
+    top: 50px;
+    display: block;
+    padding-left: auto;
+    padding-right:auto;
+}
+
+.canvas-bg{
+    width: 400px;
+    background-color: white;
+    height:400px;
+    position: fixed;
+    top: 50px;
+    left:50px;
+    z-index: 0;
+    padding: 10px;
+    display: none;
+}
+canvas{
+
+    margin-left : auto; 
+    margin-right : auto;
+}
+
+
+

@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Portfolio" content="Portfoloio">
+    <meta name="keywords" content="HTML,CSS,JavaScript,Ahreum Seo">
+    <meta property="og:image" content="img/portfolioIcon.png">
+    <meta property="og:description" content="This is a webpage for the personal portfolio">
+    <meta property="og:title" content="Portfolio">
+
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" -->
+    <!-- integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- <link rel="stylesheet" href="css/normalise.css"> -->
+    <link rel="stylesheet" href="css/WebUI_ShoppingMall.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Web UI Developing-Shopping Mall</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="font-white navtitle">HomeDeco</div>
+            <div class="font-white navitem">Home</div>
+            <div class="font-grey navitem">Store</div>
+            <div class="font-grey navitem">Price</div>
+        </div>
+
+        <div>
+            <form>
+                <input class="serchbar" type="text" placeholder="Search">
+            </form>
+            <div class="product">
+
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+        <div class="cart-container">
+            <h4 class="font-large">Shopping Cart</h4>
+            <form>
+                <div class="dragbox" id="dropdiv" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    Drag to add
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+    <!-- HammerJS -->
+    <!-- <script src="https://cdnjs.com/libraries/hammer.js/"> </script> -->
+
+    <script>
+        function parseAdd(data) {
+            for (let i = 0; i < data.products.length; i++) {
+                let innerText =
+                    `<div class="product-container" id="${data.products[i].id}" draggable="true" ondragstart="drag(event)">
+                    <div class="productimg"><img src="./img/${data.products[i].photo}"></div>
+                    <h4 class="productname font-large">${data.products[i].title}</h4>
+                    <h4 class="brand font-small">${data.products[i].brand}</h4>
+                    <p class="productprice font-medium">Price: ${data.products[i].price}</p>
+                    <button class="btn btn-black add" data-id="${data.products[i].id}">ADD</button>
+                </div>`;
+                $('.product').eq(0).append(innerText);
+            }
+        }
+
+
+
+        $(document).on('click', ".add", function (e) {
+            let productId = e.target.dataset.id;
+            let totalPrice = 0;
+            let totalQty=0
+            $.get('JSON/store.json')
+                .done(function (data) {
+                    if (localStorage.getItem('cart') == null) {
+                        let products = { "id": productId, "qty": 1, "price": data.products[productId].price}
+                        localStorage.setItem('cart', JSON.stringify([products]));
+                        totalPrice=products.price;
+                        totalQty=products.qty;
+                    }
+                    else if (localStorage.getItem('cart') !== null) {
+                        let original = JSON.parse(localStorage.cart);
+                        let nth = original.findIndex((a) => { return a.id == productId })
+                        if (nth == -1) {
+                            let current = { "id": productId, "qty": 1, "price": data.products[productId].price }
+                            original.push(current);
+                            localStorage.removeItem('cart')
+                            localStorage.setItem('cart', JSON.stringify(original));
+                            totalPrice=(current.price)*(current.qty);
+                            totalQty=current.qty;
+                        }
+                        else if (nth !== -1) {
+                            let current = original.find((a) => { return a.id == productId })
+                            current.qty = current.qty + 1
+                            // console.log(current);
+                            // console.log(original);
+                            localStorage.removeItem('cart')
+                            localStorage.setItem('cart', JSON.stringify(original));
+                            totalPrice=(current.price)*(current.qty);
+                            totalQty=current.qty;
+                        }
+                    }
+                    let attach = $(e.target).parent(0).html();
+                    let newAttach = attach.replace("add", 'remove');
+                    console.log(totalPrice)
+                    
+                    newAttach = newAttach.replace("ADD", `Qty: ${totalQty} <p>
+                    total price= ${totalPrice}<p>`);
+
+                    $('.dragbox').css('color', 'black');
+                    $('.dragbox').append(`<div class="product-container" id="drag-div" draggable="true" ondragstart="drag(event)">${newAttach}<div>`);
+                })
+
+        })
+
+
+
+        let productinfo = [];
+        $.get('JSON/store.json')
+            .done(function (data) {
+                parseAdd(data);
+            })
+            .fail(function () {
+                console.log(Error);
+            });
+
+        $('.serchbar').on('input', function () {
+            let text = $('.serchbar').val();
+            $('.product').html('');
+            $.get('JSON/store.json')
+                .done(function (data) {
+                    let filtered = data.products.filter(function (a) {
+                        return (a.title.match(new RegExp(text, "i")) || a.brand.match(new RegExp(text, "i")));
+                    })
+                    let results = {};
+                    results.products = filtered;
+                    parseAdd(results)
+
+                    $('.product h4').each(function (i, elements) {
+                        let title = elements.innerHTML;
+                        title = title.replace(text, `<span style="background : yellow">${text}</span>`);
+                        elements.innerHTML = title;
+
+                    })
+                })
+        })
+
+
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+            console.log(ev.target.id)
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            let data = ev.dataTransfer.getData("text");
+            let attach = document.getElementById(data);
+            console.log(ev.originalEvent);
+
+            $('.dragbox').css('color', 'black');
+            ev.target.appendChild(document.getElementById(data))
+
+            $('.product').html('');
+            $.get('JSON/store.json')
+                .done(function (data) {
+                    parseAdd(data);
+                })
+        }
+
+
+    </script>
+</body>
+
+</html>
