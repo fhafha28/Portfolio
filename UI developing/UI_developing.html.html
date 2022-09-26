@@ -65,21 +65,21 @@
       <h4>Carousel UI</h4>
       <div class="slide-container">
         <div class="slide-box" id="슬라이드1">
-          <img class="slide-img" src="/img/car1.png" draggable="false">
+          <img class="slide-img" src="img/car1.png" draggable="false">
         </div>
         <div class="slide-box" id="슬라이드2">
-          <img class="slide-img" src="/img/car2.png" draggable="false">
+          <img class="slide-img" src="img/car2.png" draggable="false">
         </div>
         <div class="slide-box" id="슬라이드3">
-          <img class="slide-img" src="/img/car3.png" draggable="false">
+          <img class="slide-img" src="img/car3.png" draggable="false">
         </div>
       </div>
       <div class="space"></div>
-      <button class="slide-1">1</button>
-      <button class="slide-2">2</button>
-      <button class="slide-3">3</button>
-      <button class="next">Next</button>
-      <button class="previous">Previous</button>
+      <button class="btn slide-1">1</button>
+      <button class="btn slide-2">2</button>
+      <button class="btn slide-3">3</button>
+      <button class="btn next">Next</button>
+      <button class="btn previous">Previous</button>
 
       <div class="lorem" style="width:200px; height: 100px; overflow-y:scroll; margin-top: 30px;margin-bottom: 30px;">
         <h5>Terms of Service</h5>
@@ -348,7 +348,7 @@
       let 눈에보이는div박스높이 = document.querySelector('.lorem').clientHeight;
 
       if (스크롤양 + 눈에보이는div박스높이 >= 실제높이 - 10 && scrollCount == 0) {
-        alert('다읽었어');
+        alert('You have read all');
         scrollCount++;
       }
     });
