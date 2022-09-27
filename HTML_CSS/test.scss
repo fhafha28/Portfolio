@@ -1,0 +1,103 @@
+.navbar {
+    &:hover {
+        color: blue;
+    }
+}
+
+
+
+.div {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+.div-blue {
+    @extend .div;
+    background-color: blue;
+}
+
+.div-green {
+    @extend .div;
+    background-color: green;
+}
+
+@mixin btn($bg-color) {
+    font-size: 16px;
+    padding: 10px;
+    background-color: $bg-color;
+}
+
+.btn-green {
+    @include btn(#eee);
+}
+
+
+ul {
+    width: 400px;
+
+    .ul-item {
+        width: 100%;
+        border: solid 1px grey;
+        background-color: white;
+        padding: 10px;
+        border-collapse: collapse;
+
+        &:active {
+            background-color: blue;
+            color: white;
+        }
+    }
+}
+
+@mixin alert ($content, $color, $bg-color) {
+    width: 700px;
+    background-color: $bg-color;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    text-align: left;
+    color: $color;
+
+    &::before {
+        content: $content;
+        font-weight: 600;
+    }
+}
+
+.alert-green {
+    @include alert("Well done! ", #004d00, #bee1be)
+}
+
+.alert-blue {
+    @include alert("Heads up! ", hwb(211 7% 39%), hsl(206, 100%, 87%))
+}
+
+.alert-yellow {
+    @include alert("Warning! ", hwb(33 0% 47%), hsl(56, 100%, 87%))
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    background-color: #f9e3f9;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.col-2 {
+    @extend .row;
+    width: 2/12;
+
+}
+
+.col-4 {
+    @extend .row;
+    width: 4/12;
+}
+
+.col-6 {
+    @extend .row;
+    width: 6*$width/12;  
+}
