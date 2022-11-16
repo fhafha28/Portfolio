@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main3.css">
+
+  <title>UI developing</title>
+</head>
+
+<body>
+  <div class="progression-bar"></div>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand">JSShop</span>
+      <span class="badge bg-dark" id="btn-dark">Dark 🔄</span>
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <ul class="list-group">
+    <ul class="list-group-item">Drop down list</ul>
+  </ul>
+
+
+  <div class="containerMain">
+    <div class="containerShop">
+      <h4>Title banner</h4>
+      <button onclick="로그인창()" id="login" class="btn btn-danger">Log in</button>
+      <div class="alert alert-danger">
+        <div><span class="timer" id="num">5</span>seconds left for a special gift!</div>
+      </div>
+    </div>
+
+
+
+
+    <div class="black-bg" id="login">
+      <div class="white-bg">
+        <h4>Log in</h4>
+        <form action="success.html">
+          <div class="my-3">
+            <input type="text" class="form-control" id="email">
+          </div>
+          <div class="my-3">
+            <input type="password" class="form-control" id="pwd">
+          </div>
+          <button type="submit" class="btn btn-primary" id="send">Submit</button>
+          <button type="button" class="btn btn-danger" id="close">Close</button>
+        </form>
+      </div>
+    </div>
+    <div style="clear: both"></div>
+
+    <div class="containerCarousel">
+      <h4>Carousel UI</h4>
+      <div class="slide-container">
+        <div class="slide-box" id="슬라이드1">
+          <img class="slide-img" src="img/car1.png" draggable="false">
+        </div>
+        <div class="slide-box" id="슬라이드2">
+          <img class="slide-img" src="img/car2.png" draggable="false">
+        </div>
+        <div class="slide-box" id="슬라이드3">
+          <img class="slide-img" src="img/car3.png" draggable="false">
+        </div>
+      </div>
+      <div class="space"></div>
+      <button class="btn slide-1">1</button>
+      <button class="btn slide-2">2</button>
+      <button class="btn slide-3">3</button>
+      <button class="btn next">Next</button>
+      <button class="btn previous">Previous</button>
+
+      <div class="lorem" style="width:200px; height: 100px; overflow-y:scroll; margin-top: 30px;margin-bottom: 30px;">
+        <h5>Terms of Service</h5>
+        <p>Terms of service (also known as terms of use and terms and conditions, commonly abbreviated as TOS or ToS,
+          ToU
+          or
+          T&C) are the legal agreements between a service provider and a person who wants to use that service. The
+          person
+          must agree to abide by the terms of service in order to use the offered service.</p>
+
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+  <div class="mt-3">
+    <!-- <div class="card p-3">
+      <span class="car-title">Products name</span>
+      <span class="car-price">Price</span>
+    </div> -->
+
+
+  </div>
+  <div style="height:1000px"></div>
+  </div>
+
+
+
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <script>
+    var car2 = { name: 'Black Car', price: [50000, 3000, 4000] }
+    $('.car-title').html(car2.name);
+    $('.car-price').html(car2.price[0]);
+
+    document.querySelector('.car-title').innerHTML = car2.name;
+  </script>
+
+  <script>
+    $('.slide-1').on('click', function () {
+      $('.slide-container').css('transform', 'translateX(0vw)')
+    })
+    $('.slide-2').on('click', function () {
+      $('.slide-container').css('transform', 'translateX(-100vw)')
+    })
+    $('.slide-3').on('click', function () {
+      $('.slide-container').css('transform', 'translateX(-200vw)')
+    })
+    // document.querySelector('.slide-2').addEventListener('click', function(){
+    //   document.querySelector('.slide-container').style.transform = "translate(-100vw,0)";
+    // })
+
+    let current = 1;
+    $('.next').on('click', function () {
+      $('.slide-container').css('transform', `translateX(-${current}00vw)`)
+      current++;
+    })
+
+
+    document.querySelector('.previous').addEventListener('click', function () {
+      current--
+      document.querySelector('.slide-container').style.transform = `translate(-${current}00vw,0)`;
+    })
+
+    // 드래그한 거리만큼 사진 이동시키기
+    let clickStart = 0;
+    let clickdown = false;
+
+    // $('.slide-box').eq(0).on('mousedown', function (e) {
+    //   clickStart = e.clientX;
+    //   clickdown = true;
+    // });
+
+    // $('.slide-box').eq(0).on('mousemove', function (e) {
+    //   if (clickdown == true) {
+    //     $('.slide-container').eq(0).css('transform',
+    //       `translateX(${e.clientX - clickStart}px)`)
+    //   }
+    // });
+    function clickDetect(i) {
+      $('.slide-box').eq(i).on('mousedown', function (e) {
+        clickStart = e.clientX;
+        clickdown = true;
+      });
+    }
+    function slideXmove(i) {
+      $('.slide-box').eq(i).on('mousemove', function (e) {
+        if (clickdown == true) {
+          $('.slide-container').eq(i).css('transform',
+            `translateX(${e.clientX - clickStart}px)`)
+        }
+      });
+    }
+
+    function overSlide(i, prev, next) {
+      $('.slide-box').eq(i).on('mouseup', function (e) {
+        clickdown = false;
+        if (e.clientX - clickStart < -100) {
+          $('.slide-container').eq(i).css('transition', 'all 0.5s')
+            .css('transform', `translateX(${next}vw)`)
+        } else $('.slide-container').eq(i).css('transition', 'all 0.5s')
+          .css('transform', `translateX(${prev}vw)`)
+        setTimeout(() => {
+          $('.slide-container').css('transition', 'none')
+        }, 500)
+      });
+    }
+
+    clickDetect(0);
+    slideXmove(0);
+    overSlide(0, 0, -100)
+    clickDetect(1);
+    slideXmove(1);
+    overSlide(1, -100, -200)
+    clickDetect(2);
+    slideXmove(2);
+    overSlide(2, -200, 0)
+
+
+    // $('.slide-box').eq(0).on('mouseup', function (e) {
+    //   clickdown = false;
+    //   if (e.clientX - clickStart < -100) {
+    //     $('.slide-container').eq(0).css('transition', 'all 0.5s')
+    //       .css('transform', `translateX(-100vw)`)
+    //   } else $('.slide-container').eq(0).css('transition', 'all 0.5s')
+    //     .css('transform', `translateX(0vw)`)
+    //   setTimeout(() => {
+    //     $('.slide-container').css('transition', 'none')
+    //   }, 500)
+    // });
+
+
+    // // 모바일 환경에서 터치로 바꾸기
+    // $('.slide-box').eq(0).on('touchstart', function (e) {
+    //   clickStart = e.touches[0].clientX;
+    //   clickdown = true;
+    // });
+
+    // $('.slide-box').eq(0).on('mousemove', function (e) {
+    //   if (clickdown == true) {
+    //     $('.slide-container').eq(0).css('transform',
+    //       `translateX(${e.touches[0].clientX - clickStart}px)`)
+    //   }
+    // });
+
+    // $('.slide-box').eq(0).on('mouseup', function (e) {
+    //   clickdown = false;
+    //   if(e.touches[0].clientX-clickStart<-100){
+    //     $('.slide-container').eq(0).css('transition', 'all 0.5s')
+    //     .css('transform',`translateX(-100vw)`)
+    //   } else $('.slide-container').eq(0).css('transition', 'all 0.5s')
+    //   .css('transform', `translateX(0vw)`)
+    //   setTimeout(()=>{
+    //   $('.slide-container').css('transition', 'none')
+    // }, 500)
+    // });
+
+
+
+
+  </script>
+
+  <script>
+
+    function 로그인창() {
+      $('.black-bg').addClass('show-modal');
+      console.log($('#login'));
+      $('#close').on('click', function () {
+        $('.black-bg').removeClass('show-modal');
+      });
+    }
+    document.querySelector('.navbar-toggler').addEventListener('click', function () {
+      document.querySelectorAll('.list-group')[0].classList.toggle('show');
+    })
+
+    $('#send').on('click', function (e) {
+      let 입력한메일 = document.getElementById('email').value;
+      let 입력한비번 = document.getElementById('pwd').value;
+      if (입력한메일 == '') {
+        e.preventDefault();
+        alert('write e-mail');
+      } else
+        if (!/\S+\@\S+\.\S+/.test(입력한메일)) {
+          alert('wrong form of e-mail');
+          e.preventDefault();
+        } else
+          if (입력한비번 == '') {
+            e.preventDefault();
+            alert('write password');
+          } else
+            if (입력한비번.length < 6) {
+              e.preventDefault();
+              alert('비밀번호는 6자 이상 입력해야 합니다');
+            }
+            else
+              if (!/[A-Z]+/.test(입력한비번)) {
+                e.preventDefault();
+                alert('비밀번호는 대문자를 포함해야 합니다');
+              }
+    });
+    document.getElementById('email').addEventListener('input', function () {
+      console.log('안녕');
+    })
+
+    let count = 0;
+    $('.badge').on('click', function () {
+      count++;
+      if (count % 2 == 1) {
+        $('.badge').html('Light 🔄');
+      } else {
+        $('.badge').html('Dark 🔄');
+      }
+    });
+
+    setTimeout(function () {
+      $('.alert').hide();
+    }, 5000)
+
+    let counts = 5;
+    setInterval(function () {
+      counts--;
+      if (counts >= 0) {
+        document.querySelector('#num').innerHTML = counts;
+      }
+    }, 1000);
+  </script>
+
+  <script>
+    $(window).on('scroll', function () {
+      if (window.scrollY > 100) {
+        $('.navbar-brand').css('font-size', '20px');
+      }
+      if (window.scrollY <= 100) {
+        $('.navbar-brand').css('font-size', '30px');
+      }
+    });
+
+    $(window).on('scroll', function () {
+      let i = ((window.scrollY + document.querySelector('html').clientHeight) / document.querySelector('html').scrollHeight) * 100;
+
+      if (i > 30)
+        $('.progression-bar').css('width', `${i}%`)
+      if (i <= 30)
+        $('.progression-bar').css('width', `0%`)
+    })
+
+
+    // window.addEventListener('scroll',function(){
+    //   if(window.scrollY>=100){
+    //     document.querySelector('.navbar-brand').style.font-size='20';
+    //   }
+    // })
+    let scrollCount = 0;
+
+    $('.lorem').on('scroll', function () {
+      let scrollAmount = document.querySelector('.lorem').scrollTop;
+      let 실제높이 = document.querySelector('.lorem').scrollHeight;
+      let 눈에보이는div박스높이 = document.querySelector('.lorem').clientHeight;
+
+      if (scrollAmount + 눈에보이는div박스높이 >= 실제높이 - 10 && scrollCount == 0) {
+        alert('You have read all');
+        scrollCount++;
+      }
+    });
+
+  </script>
+
+  <script>
+    $('.black-bg').on('click', function (e) {
+      if (e.target == document.querySelector('.black-bg'))
+        $('.black-bg').removeClass('show-modal');
+    })
+
+
+
+  </script>
+</body>
+
+</html>
